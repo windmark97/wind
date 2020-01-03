@@ -1,4 +1,4 @@
-package com.wind.service.service;
+package com.wind.service.service.interfaces;
 
 import com.zmn.advert.model.entity.advertapi.AdvertCateg;
 

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmn.advert.persistence.advertapi.AdvertHttpApiLogDao">
+  <resultMap id="BaseResultMap" type="com.zmn.advert.model.entity.advertapi.AdvertHttpApiLog">
+    <id column="log_id" jdbcType="BIGINT" property="logId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="date" jdbcType="INTEGER" property="date" />
+    <result column="plat_type" jdbcType="INTEGER" property="platType" />
+    <result column="http_param" jdbcType="VARCHAR" property="httpParam" />
+    <result column="message" jdbcType="VARCHAR" property="message" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="tableName">`advert_http_api_log`</sql>
+
+  <sql id="selectTable">
+    FROM
+    <include refid="tableName"/>
+  </sql>
+
+  <sql id="updateTable">
+    UPDATE
+    <include refid="tableName"/>
+    SET
+  </sql>
+
+  <sql id="insertTable">
+    INSERT INTO
+    <include refid="tableName"/>
+  </sql>
+
+  <sql id="deleteTable">
+    DELETE FROM
+    <include refid="tableName"/>
+  </sql>
+
+  <sql id="columnNoKey">
+	   user_id, `date`, plat_type,http_param, message, create_time
+  </sql>
+
+  <sql id="columnAll">
+    `log_id`,
+    <include refid="columnNoKey"/>
+  </sql>
+  <sql id="whereKey">
+        WHERE `log_id` = #{logId,jdbcType=BIGINT}
+    </sql>
+  <sql id="orderSql">
+        ORDER BY `log_id` ASC
+    </sql>
+  <sql id="whereSql">
+    <where>
+      <if test="logId != null">
+        AND log_id = #{logId,jdbcType=BIGINT}
+      </if>
+      <if test="platType != null">
+        AND plat_type = #{platType,jdbcType=INTEGER}
+      </if>
+      <if test="userId != null">
+        AND user_id = #{userId,jdbcType=INTEGER}
+      </if>
+      <if test="date != null">
+        AND `date` = #{date,jdbcType=INTEGER}
+      </if>
+      <if test="startDate != null and endDate != null">
+        AND `creat_time` BETWEEN STR_TO_DATE(#{startDate,jdbcType=VARCHAR}, '%Y-%m-%d %H:%i:%s') AND STR_TO_DATE(CONCat(#{endDate,jdbcType=VARCHAR},'23:59:59' ), '%Y-%m-%d %H:%i:%s')
+      </if>
+    </where>
+  </sql>
+  <sql id="pageSql">
+    <if test="pageSize != null and pageSize != 0">
+      LIMIT #{startIndex,jdbcType=INTEGER}, #{pageSize,jdbcType=INTEGER}
+    </if>
+  </sql>
+  <sql id="countSql">
+        SELECT COUNT(*) FROM
+    </sql>
+
+  <!--根据主键查询-->
+  <select id="findByKey" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT
+    <include refid="columnAll"/>
+    <include refid="selectTable"/>
+    <include refid="whereKey"/>
+  </select>
+  <!--分页查询-->
+  <select id="listPage" parameterType="com.zmn.advert.model.entity.advertapi.query.AdvertHttpApiLogQuery"
+          resultMap="BaseResultMap">
+    SELECT
+    <include refid="columnAll"/>
+    <include refid="selectTable"/>
+    <include refid="whereSql"/>
+    <include refid="orderSql"/>
+    <include refid="pageSql"/>
+  </select>
+  <!--统计数据量-->
+  <select id="countByQuery" parameterType="com.zmn.advert.model.entity.advertapi.query.AdvertHttpApiLogQuery"
+          resultType="Integer">
+    <include refid="countSql"/>
+    <include refid="tableName"/>
+    <include refid="whereSql"/>
+  </select>
+
+  <insert id="insert" parameterType="com.zmn.advert.model.entity.advertapi.AdvertHttpApiLog">
+    <include refid="insertTable"/>(
+    <include refid="columnNoKey"/>
+    ) values
+    (#{userId,jdbcType=INTEGER}, #{date,jdbcType=INTEGER}, #{platType,jdbcType=INTEGER},
+    #{httpParam,jdbcType=VARCHAR},#{message,jdbcType=VARCHAR}, current_time)
+  </insert>
+  <delete id="deleteByKey" parameterType="Integer">
+    <include refid="deleteTable"/>
+    <include refid="whereKey"/>
+  </delete>
+  <delete id="deleteByWhere" parameterType="com.zmn.advert.model.entity.advertapi.query.AdvertHttpApiLogQuery">
+    <include refid="deleteTable"/>
+    <include refid="whereSql"/>
+  </delete>
+
+
+</mapper>

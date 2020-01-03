@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmn.advert.persistence.advertapi.SemReportDayDao">
+    <resultMap id="BaseResultMap" type="com.zmn.advert.model.entity.advertapi.SemReportDay">
+        <id column="report_id" jdbcType="BIGINT" property="reportId"/>
+        <result column="report_date" jdbcType="INTEGER" property="reportDate"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="serv_categ_id" jdbcType="INTEGER" property="servCategId"/>
+        <result column="channel_id" jdbcType="INTEGER" property="channelId"/>
+        <result column="categ_one_id" jdbcType="INTEGER" property="categOneId"/>
+        <result column="city_id" jdbcType="INTEGER" property="cityId"/>
+        <result column="impression" jdbcType="INTEGER" property="impression"/>
+        <result column="click" jdbcType="INTEGER" property="click"/>
+        <result column="cost" jdbcType="INTEGER" property="cost"/>
+        <result column="cpc" jdbcType="INTEGER" property="cpc"/>
+        <result column="cpm" jdbcType="INTEGER" property="cpm"/>
+        <result column="ctr" jdbcType="DECIMAL" property="ctr"/>
+        <result column="city" jdbcType="VARCHAR" property="city"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="group_name" jdbcType="VARCHAR" property="groupName"/>
+    </resultMap>
+    <sql id="tableName">`sem_report_day`</sql>
+
+    <sql id="selectTable">
+        FROM
+        <include refid="tableName"/>
+    </sql>
+
+    <sql id="updateTable">
+        UPDATE
+        <include refid="tableName"/>
+        SET
+    </sql>
+
+    <sql id="insertTable">
+        INSERT INTO
+        <include refid="tableName"/>
+    </sql>
+
+    <sql id="deleteTable">
+        DELETE FROM
+        <include refid="tableName"/>
+    </sql>
+
+    <sql id="columnNoKey">
+         `report_date`, user_id, channel_id,serv_categ_id, categ_one_id,
+        city_id, city, impression, cpm, click, ctr, cost, cpc, create_time,group_name
+    </sql>
+
+    <sql id="columnAll">
+        `report_id`,
+        <include refid="columnNoKey"/>
+    </sql>
+    <sql id="whereKey">
+        WHERE `report_id` = #{reportId,jdbcType=BIGINT}
+    </sql>
+    <sql id="orderSql">
+        ORDER BY `report_id` ASC
+    </sql>
+    <sql id="whereSql">
+        <where>
+            <if test="reportId != null">
+                AND report_id = #{reportId,jdbcType=BIGINT}
+            </if>
+            <if test="reportIds != null and reportIds.size() != 0">
+                AND report_id IN
+                <foreach collection="reportIds" item="item" index="index" open="(" separator="," close=")">
+                    #{item,jdbcType=BIGINT}
+                </foreach>
+            </if>
+            <if test="channelId != null">
+                AND channel_id = #{channelId,jdbcType=INTEGER}
+            </if>
+             <if test="userId != null">
+                AND user_id = #{userId,jdbcType=INTEGER}
+            </if>
+            <if test="servCategId != null">
+                AND serv_categ_id = #{servCategId,jdbcType=INTEGER}
+            </if>
+            <if test="reportIds != null and reportIds.size() == 0">
+                AND FALSE
+            </if>
+            <if test="startDate != null and endDate != null">
+                AND `report_date` BETWEEN #{startDate,jdbcType=INTEGER} AND #{INTEGER,jdbcType=INTEGER}
+            </if>
+        </where>
+    </sql>
+    <sql id="pageSql">
+        <if test="pageSize != null and pageSize != 0">
+            LIMIT #{startIndex,jdbcType=INTEGER}, #{pageSize,jdbcType=INTEGER}
+        </if>
+    </sql>
+    <sql id="countSql">
+        SELECT COUNT(*) FROM
+    </sql>
+
+    <!--根据主键查询-->
+    <select id="findByKey" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT
+        <include refid="columnAll"/>
+        <include refid="selectTable"/>
+        <include refid="whereKey"/>
+    </select>
+    <!--分页查询-->
+    <select id="listPage" parameterType="com.zmn.advert.model.entity.advertapi.query.SemReportDayQuery"
+            resultMap="BaseResultMap">
+        SELECT
+        <include refid="columnAll"/>
+        <include refid="selectTable"/>
+        <include refid="whereSql"/>
+        <include refid="orderSql"/>
+        <include refid="pageSql"/>
+    </select>
+    <!--统计数据量-->
+    <select id="countByQuery" parameterType="com.zmn.advert.model.entity.advertapi.query.SemReportDayQuery"
+            resultType="Integer">
+        <include refid="countSql"/>
+        <include refid="tableName"/>
+        <include refid="whereSql"/>
+    </select>
+
+    <insert id="insert" parameterType="com.zmn.advert.model.entity.advertapi.SemReportDay">
+        <include refid="insertTable"/>(
+        <include refid="columnNoKey"/>
+        ) values (#{reportDate,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{channelId,jdbcType=INTEGER}, #{servCategId,jdbcType=INTEGER},
+        #{categOneId,jdbcType=INTEGER},
+        #{cityId,jdbcType=INTEGER}, #{city,jdbcType=VARCHAR},
+        #{impression,jdbcType=INTEGER}, #{cpm,jdbcType=INTEGER}, #{click,jdbcType=INTEGER},
+        #{ctr,jdbcType=DECIMAL}, #{cost,jdbcType=INTEGER}, #{cpc,jdbcType=INTEGER},
+        current_time, #{groupName,jdbcType=VARCHAR})
+    </insert>
+    <!--批量插入数据-->
+    <insert id="insertBatch" parameterType="java.util.List">
+        <include refid="insertTable"/>(
+        <include refid="columnNoKey"/>
+        ) values
+        <foreach collection="list" index="index" item="record" separator=",">
+            (#{record.reportDate,jdbcType=INTEGER}, #{record.userId,jdbcType=INTEGER}, #{record.channelId,jdbcType=INTEGER}, #{record.servCategId,jdbcType=INTEGER},
+            #{record.categOneId,jdbcType=INTEGER},
+            #{record.cityId,jdbcType=INTEGER}, #{record.city,jdbcType=VARCHAR},
+            #{record.impression,jdbcType=INTEGER}, #{record.cpm,jdbcType=INTEGER}, #{record.click,jdbcType=INTEGER},
+            #{record.ctr,jdbcType=DECIMAL}, #{record.cost,jdbcType=INTEGER}, #{record.cpc,jdbcType=INTEGER},
+            current_time, #{record.groupName,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmn.advert.persistence.advertapi.AdvertCategDao">
+  <resultMap id="BaseResultMap" type="com.zmn.advert.model.entity.advertapi.AdvertCateg">
+    <id column="pk_id" jdbcType="INTEGER" property="pkId" />
+    <result column="categ_id" jdbcType="INTEGER" property="categId" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="tableName">`advert_categ`</sql>
+
+  <sql id="selectTable">
+    FROM
+    <include refid="tableName"/>
+  </sql>
+
+  <sql id="updateTable">
+    UPDATE
+    <include refid="tableName"/>
+    SET
+  </sql>
+
+  <sql id="insertTable">
+    INSERT INTO
+    <include refid="tableName"/>
+  </sql>
+
+  <sql id="deleteTable">
+    DELETE FROM
+    <include refid="tableName"/>
+  </sql>
+
+  <sql id="columnNoKey">
+	     categ_id, `type`, `name`, update_time
+  </sql>
+
+  <sql id="columnAll">
+    `pk_id`,
+    <include refid="columnNoKey"/>
+  </sql>
+  <sql id="whereKey">
+        WHERE `pk_id` = #{pkId,jdbcType=INTEGER}
+    </sql>
+  <sql id="orderSql">
+        ORDER BY `pk_id` ASC
+    </sql>
+  <sql id="whereSql">
+    <where>
+      <if test="pkId != null">
+        AND pk_id = #{pkId,jdbcType=INTEGER}
+      </if>
+      <if test="name != null">
+        AND  `name` like CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="type != null">
+        AND type = #{type,jdbcType=INTEGER}
+      </if>
+      <if test="categId != null">
+        AND `categ_id` = #{categId,jdbcType=INTEGER}
+      </if>
+    </where>
+  </sql>
+  <sql id="pageSql">
+    <if test="pageSize != null and pageSize != 0">
+      LIMIT #{startIndex,jdbcType=INTEGER}, #{pageSize,jdbcType=INTEGER}
+    </if>
+  </sql>
+  <sql id="countSql">
+        SELECT COUNT(*) FROM
+    </sql>
+
+  <!--根据主键查询-->
+  <select id="findByKey" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT
+    <include refid="columnAll"/>
+    <include refid="selectTable"/>
+    <include refid="whereKey"/>
+  </select>
+  <!--分页查询-->
+  <select id="listAll" parameterType="com.zmn.advert.model.entity.advertapi.AdvertCateg"
+          resultMap="BaseResultMap">
+    SELECT
+    <include refid="columnAll"/>
+    <include refid="selectTable"/>
+    <include refid="whereSql"/>
+    <include refid="orderSql"/>
+  </select>
+  <!--统计数据量-->
+  <select id="countByQuery" parameterType="com.zmn.advert.model.entity.advertapi.AdvertCateg"
+          resultType="Integer">
+    <include refid="countSql"/>
+    <include refid="tableName"/>
+    <include refid="whereSql"/>
+  </select>
+
+
+</mapper>
