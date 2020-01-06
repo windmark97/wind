@@ -1,9 +1,5 @@
 package com.wind.service.handler;
 
-import com.zmn.advert.handler.strategy.Advert360ClientLoginStrategy;
-import com.zmn.advert.manager.exception.AdvertException;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.manager.common.interfaces.redis.RedisManager;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;

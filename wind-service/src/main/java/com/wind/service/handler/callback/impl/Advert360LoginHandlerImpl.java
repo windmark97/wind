@@ -1,8 +1,7 @@
 package com.wind.service.handler.callback.impl;
 
-import com.zmn.advert.handler.callback.Advert360LoginHandler;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.advert.util.XmlUtils;
+import com.wind.service.handler.callback.Advert360LoginHandler;
+import com.wind.service.util.XmlUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

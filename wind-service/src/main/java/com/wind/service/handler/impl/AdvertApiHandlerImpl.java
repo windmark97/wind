@@ -1,14 +1,7 @@
 package com.wind.service.handler.impl;
 
-import com.zmn.advert.business.interfaces.advertapi.AdvertDataBService;
-import com.zmn.advert.handler.AdvertApiHandler;
-import com.zmn.advert.handler.AdvertDataHandler;
-import com.zmn.advert.handler.AdvertStrategy;
-import com.zmn.advert.manager.constant.AdvertApiEnum;
-import com.zmn.advert.manager.exception.AdvertException;
-import com.zmn.advert.manager.utils.SpringContextUtils;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.advert.services.interfaces.advertapi.AdvertHttpApiLogService;
+import com.wind.service.handler.AdvertApiHandler;
+import com.wind.service.service.interfaces.AdvertHttpApiLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;

@@ -2,11 +2,7 @@ package com.wind.service.handler.callback.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.zmn.advert.handler.AdvertDataHandler;
-import com.zmn.advert.handler.AdvertMappingCacheHandler;
-import com.zmn.advert.manager.exception.AdvertException;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.advert.model.entity.advertapi.SemReportDay;
+import com.wind.service.handler.AdvertDataHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
