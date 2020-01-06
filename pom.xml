@@ -3,11 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <relativePath/>
+    </parent>
     <groupId>com.wind</groupId>
     <artifactId>wind</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <name>wind</name>
+    <description>Demo project wind</description>
     <modules>
         <module>wind-data</module>
         <module>wind-task</module>
@@ -17,36 +24,16 @@
         <module>wind-dao</module>
         <module>wind-service</module>
     </modules>
-    <name>wind</name>
-    <description>Demo project wind</description>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.2.RELEASE</version>
-        <relativePath/>
-    </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <springboot.version>2.2.2.RELEASE</springboot.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
-
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <exclusions>
-                    <!-- 去除旧log依赖 -->
-                    <exclusion>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
@@ -56,13 +43,16 @@
                         <artifactId>spring-boot-starter-logging</artifactId>
                     </exclusion>
                 </exclusions>
+                <version>${springboot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
+                <version>${springboot.version}</version>
             </dependency>
-            <dependency> <!-- 引入log4j2依赖 -->
+            <!-- 引入log4j2依赖 -->
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
             </dependency>
@@ -80,8 +70,6 @@
                 <scope>provided</scope>
             </dependency>
 
-
-
             <dependency>
                 <groupId>commons-net</groupId>
                 <artifactId>commons-net</artifactId>
@@ -96,6 +84,18 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-pool2</artifactId>
                 <version>2.6.0</version>
+            </dependency>
+            <!--反射-->
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-reflect</artifactId>
+                <version>2.12.8</version>
+            </dependency>
+            <!--redis分布式锁-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>2.7.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

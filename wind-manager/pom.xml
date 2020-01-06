@@ -11,6 +11,7 @@
 
     <groupId>com.wind.manager</groupId>
     <artifactId>wind-manager</artifactId>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -24,7 +25,6 @@
             <groupId>commons-pool</groupId>
             <artifactId>commons-pool</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-reflect</artifactId>
@@ -37,7 +37,6 @@
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>
