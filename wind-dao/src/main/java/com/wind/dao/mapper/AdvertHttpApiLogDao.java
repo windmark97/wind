@@ -1,7 +1,8 @@
 package com.wind.dao.mapper;
 
-import com.zmn.advert.model.entity.advertapi.AdvertHttpApiLog;
-import com.zmn.advert.model.entity.advertapi.query.AdvertHttpApiLogQuery;
+
+import com.wind.dao.model.AdvertHttpApiLog;
+import com.wind.dao.model.AdvertHttpApiLogQuery;
 
 import java.util.List;
 

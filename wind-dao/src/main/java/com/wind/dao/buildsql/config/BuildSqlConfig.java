@@ -1,6 +1,6 @@
 package com.wind.dao.buildsql.config;
 
-import com.zmn.performance.persistence.buildsql.utils.BuildSqlUtils;
+import com.wind.dao.buildsql.utils.BuildSqlUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

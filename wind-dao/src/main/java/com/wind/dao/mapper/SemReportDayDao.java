@@ -1,7 +1,7 @@
 package com.wind.dao.mapper;
 
-import com.zmn.advert.model.entity.advertapi.SemReportDay;
-import com.zmn.advert.model.entity.advertapi.query.SemReportDayQuery;
+import com.wind.dao.model.SemReportDay;
+import com.wind.dao.model.SemReportDayQuery;
 
 import java.util.List;
 

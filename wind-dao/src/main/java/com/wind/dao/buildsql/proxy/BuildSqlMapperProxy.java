@@ -1,6 +1,6 @@
 package com.wind.dao.buildsql.proxy;
 
-import com.zmn.performance.persistence.buildsql.config.BuildSqlConfiguration;
+import com.wind.dao.buildsql.config.BuildSqlConfiguration;
 import org.apache.ibatis.reflection.ExceptionUtil;
 
 import java.io.Serializable;

@@ -1,6 +1,6 @@
 package com.wind.dao.buildsql.config;
 
-import com.zmn.performance.persistence.buildsql.proxy.BuildSqlMapperRegistry;
+import com.wind.dao.buildsql.proxy.BuildSqlMapperRegistry;
 import org.apache.ibatis.session.Configuration;
 
 /**

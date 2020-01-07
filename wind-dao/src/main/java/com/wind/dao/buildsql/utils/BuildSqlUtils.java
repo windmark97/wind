@@ -1,6 +1,6 @@
 package com.wind.dao.buildsql.utils;
 
-import com.zmn.performance.persistence.buildsql.config.BuildSqlConfiguration;
+import com.wind.dao.buildsql.config.BuildSqlConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.mapping.BoundSql;

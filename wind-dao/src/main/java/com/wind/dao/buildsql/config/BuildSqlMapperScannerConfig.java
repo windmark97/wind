@@ -1,8 +1,8 @@
 package com.wind.dao.buildsql.config;
 
-import com.zmn.performance.persistence.buildsql.annotation.BuildSql;
-import com.zmn.performance.persistence.buildsql.proxy.BuildClassPathMapperScanner;
-import com.zmn.performance.persistence.buildsql.proxy.BuildSqlMapperFactoryBean;
+import com.wind.dao.buildsql.annotation.BuildSql;
+import com.wind.dao.buildsql.proxy.BuildClassPathMapperScanner;
+import com.wind.dao.buildsql.proxy.BuildSqlMapperFactoryBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValue;

@@ -1,6 +1,6 @@
 package com.wind.dao.buildsql.proxy;
 
-import com.zmn.performance.persistence.buildsql.config.BuildSqlConfiguration;
+import com.wind.dao.buildsql.config.BuildSqlConfiguration;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;

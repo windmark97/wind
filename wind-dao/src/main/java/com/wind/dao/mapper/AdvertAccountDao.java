@@ -1,7 +1,7 @@
 package com.wind.dao.mapper;
 
-import com.zmn.advert.model.entity.advertapi.AdvertAccount;
-import com.zmn.advert.model.entity.advertapi.query.AdvertAccountQuery;
+import com.wind.dao.model.AdvertAccount;
+import com.wind.dao.model.AdvertAccountQuery; 
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.wind.dao.buildsql.handler;
 
 import com.google.common.collect.Maps;
-import com.zmn.performance.persistence.buildsql.config.BuildSqlConfiguration;
+import com.wind.dao.buildsql.config.BuildSqlConfiguration;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.executor.result.DefaultMapResultHandler;

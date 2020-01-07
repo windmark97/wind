@@ -1,6 +1,6 @@
 package com.wind.dao.buildsql.proxy;
 
-import com.zmn.performance.persistence.buildsql.config.BuildSqlConfiguration;
+import com.wind.dao.buildsql.config.BuildSqlConfiguration; 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.ErrorContext;
 import org.springframework.beans.factory.FactoryBean;
