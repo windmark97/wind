@@ -25,51 +25,27 @@
         <module>wind-service</module>
     </modules>
     <properties>
+        <project.version>1.0-SNAPSHOT</project.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <springboot.version>2.2.2.RELEASE</springboot.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
-        <fastjson.version>1.2.49</fastjson.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <exclusions><!--去除springboot默认的日志-->
-                    <exclusion>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-                <version>${springboot.version}</version>
+                <groupId>com.wind.common</groupId>
+                <artifactId>wind-common</artifactId>
+                <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
-                <version>${springboot.version}</version>
-            </dependency>
+
             <!-- 引入log4j2依赖 -->
            <!-- <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
             </dependency>-->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.5</version>
-            </dependency>
-
-            <!-- lombok消除冗长的代码 -->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.22</version>
-                <scope>provided</scope>
-            </dependency>
 
             <dependency>
                 <groupId>commons-net</groupId>
@@ -98,30 +74,23 @@
                 <artifactId>redisson</artifactId>
                 <version>2.7.0</version>
             </dependency>
+            <!--redis-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>2.1.5.RELEASE</version>
+                <version>${springboot.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>16.0.1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.5</version>
-            </dependency>
+            <!--http请求-->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>4.5.6</version>
+            </dependency>
+            <!--jdbc-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${springboot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

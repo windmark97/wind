@@ -12,5 +12,10 @@
     <groupId>com.wind.data</groupId>
     <artifactId>wind-data</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.wind.common</groupId>
+            <artifactId>wind-common</artifactId>
+        </dependency>
+    </dependencies>
 </project>

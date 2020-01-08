@@ -3,6 +3,7 @@ package com.wind.service.business.impl.advertapi;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
+import com.wind.common.dto.ResponseDTO;
 import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.dao.model.SemReportDay;
 import com.wind.service.business.interfaces.advertapi.AdvertDataBService;
@@ -22,8 +23,8 @@ import java.util.List;
 @Service
 public class AdvertDataBServiceImpl implements AdvertDataBService {
 
-    @Reference(version = com.zmn.plat.dubbo.utils.DubboConsts.INTERFACE_VERSION, check = false)
-    private DatasetModifyRemoteService datasetModifyRemoteService;
+    //@Reference(check = false)
+    //private DatasetModifyRemoteService datasetModifyRemoteService;
 
     private static final String INSERT_SQL = "insert into ods.ods_publicize_cost partition(day=#day,account_id=#userId) values";
     private static final String PARTITION_FIELD_DAY = "#day";
@@ -46,8 +47,8 @@ public class AdvertDataBServiceImpl implements AdvertDataBService {
 
             for (List<SemReportDay> rowList : semReportDayList) {
                 String sql = buildSql(rowList, rowList.get(0).getReportDate(), rowList.get(0).getUserId());
-                ResponseDTO<Integer> responseDTO = datasetModifyRemoteService.insert(sql);
-                log.info("modifyAdvertDataByquery result:{} ", JSON.toJSONString(responseDTO));
+                //ResponseDTO<Integer> responseDTO = datasetModifyRemoteService.insert(sql);
+                //log.info("modifyAdvertDataByquery result:{} ", JSON.toJSONString(responseDTO));
             }
         } catch (Exception e) {
             log.error(e.getMessage(), e);
@@ -63,8 +64,8 @@ public class AdvertDataBServiceImpl implements AdvertDataBService {
      */
     private void clearData(Integer userId, Integer day) {
         String sql = CLEAR_SQL.replace(PARTITION_FIELD_DAY, day.toString()).replace(PARTITION_FIELD_USERID, userId.toString());
-        ResponseDTO<Integer> responseDTO = datasetModifyRemoteService.insert(sql);
-        log.info("clearData result:{},sql:{} ", JSON.toJSONString(responseDTO), sql);
+        //ResponseDTO<Integer> responseDTO = datasetModifyRemoteService.insert(sql);
+        //log.info("clearData result:{},sql:{} ", JSON.toJSONString(responseDTO), sql);
     }
 
     @Override
