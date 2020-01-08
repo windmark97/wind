@@ -45,6 +45,11 @@
                 <artifactId>wind-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.wind.dao</groupId>
+                <artifactId>wind-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- 引入log4j2依赖 -->
            <!-- <dependency>
@@ -97,11 +102,11 @@
                 <artifactId>spring-boot-starter-jdbc</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-cache</artifactId>
                 <version>${springboot.version}</version>
-            </dependency>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
     <profiles>
