@@ -11,6 +11,11 @@
 
     <groupId>com.wind.task</groupId>
     <artifactId>wind-task</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.wind.common</groupId>
+            <artifactId>wind-common</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

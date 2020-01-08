@@ -1,13 +1,13 @@
 package com.wind.service.handler.strategy.impl;
 
 import com.google.common.collect.Maps;
-import com.zmn.advert.handler.AdvertDataHandler;
-import com.zmn.advert.handler.strategy.AdvertBaiduStrategy;
-import com.zmn.advert.manager.constant.AdvertApiConsts;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.advert.model.entity.advertapi.ApiCallParam;
+import com.wind.dao.model.AdvertBaseInfo;
+import com.wind.dao.model.ApiCallParam;
+import com.wind.manager.constant.AdvertApiConsts;
+import com.wind.service.handler.AdvertDataHandler;
+import com.wind.service.handler.strategy.AdvertBaiduStrategy;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

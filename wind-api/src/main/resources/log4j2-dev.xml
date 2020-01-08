@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="trace" monitorInterval="600">
+    <properties>
+        <property name="LOG_HOME">logs</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout charset="UTF-8">
+                <pattern>[%-5p] %d %c %M %L- %m%n</pattern>
+            </PatternLayout>
+        </Console>
+        <!--<File name="logfile" fileName="logs/log-all.log">
+            <PatternLayout charset="UTF-8">
+                <pattern>[%-5p] %d %c %M %L - %m%n</pattern>
+            </PatternLayout>
+        </File>
+        <File name="erroFile" fileName="logs/error-log.log">
+            <PatternLayout charset="UTF-8">
+                <pattern>[%-5p] %d %c %M %L - %m%n</pattern>
+            </PatternLayout>
+        </File>-->
+        <RollingFile name="logfile" fileName="${LOG_HOME}/log-info.log" filePattern="${LOG_HOME}/log-%d{yyyy-MM-dd}.log">  
+            <Filters>
+                <ThresholdFilter level="INFO" />
+                <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL" />
+            </Filters>
+            <PatternLayout pattern="[%-5p] %d %c %M:%L- %m%n" />  
+            <Policies>  
+                <!-- 归档每天的文件 -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />  
+                <!-- 限制单个文件大小 -->
+                <SizeBasedTriggeringPolicy size="100 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="errfile" fileName="${LOG_HOME}/error-info.log" filePattern="${LOG_HOME}/error-%d{yyyy-MM-dd}.log">  
+            <Filters>
+                <ThresholdFilter level="ERROR" />
+            </Filters>
+            <PatternLayout pattern="[%-5p] %d %c %M:%L- %m%n" />  
+            <Policies>  
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />  
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="sqlFile" fileName="${LOG_HOME}/sql-info.log" filePattern="${LOG_HOME}/sql-%d{yyyy-MM-dd}.log">  
+           <!-- <Filters>
+                <ThresholdFilter level="DEBUG" />
+            </Filters>-->
+            <PatternLayout pattern="[%-5p] %d %c %M:%L- %m%n" />  
+            <Policies>  
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />  
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <!--<RollingRandomAccessFile name="logfile" fileName="${LOG_HOME}/app.log" filePattern="${LOG_HOME}/error-%i.log">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+                <Policies>  
+                    <SizeBasedTriggeringPolicy size="10 MB" />  
+                </Policies>
+            <DefaultRolloverStrategy max="20"/>  
+        </RollingRandomAccessFile>  -->
+    </Appenders>
+    <Loggers>
+        <!--<Logger name="org.springframework" level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="logfile" />
+        </Logger>
+
+        <logger name="druid.sql.ResultSet" level="info" additivity="false">
+            <AppenderRef ref="logfile" />
+            <appender-ref ref="Console"/>
+        </logger>
+        <Logger name="com.cmiot.hp" level="info">
+            <AppenderRef ref="logfile" />
+            <AppenderRef ref="Console" />
+        </Logger>-->
+        <!--<logger name="druid.sql.Statement" level="debug" additivity="false">
+            <appender-ref ref="sqlFile"/>
+        </logger>-->
+        <Root level="info">
+            <AppenderRef ref="logfile" />
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="errfile" />
+        </Root>
+    </Loggers>
+</Configuration>

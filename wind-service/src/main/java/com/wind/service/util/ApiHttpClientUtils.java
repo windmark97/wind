@@ -2,8 +2,8 @@ package com.wind.service.util;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
-import com.zmn.advert.manager.constant.AdvertApiConsts;
-import com.zmn.advert.model.entity.advertapi.ApiCallParam;
+import com.wind.dao.model.ApiCallParam;
+import com.wind.manager.constant.AdvertApiConsts;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;

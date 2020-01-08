@@ -1,6 +1,7 @@
 package com.wind.service.handler;
 
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
+
+import com.wind.dao.model.AdvertBaseInfo;
 
 /**
  * 搜索推广执行策略接口

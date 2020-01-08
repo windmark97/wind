@@ -11,6 +11,15 @@
 
     <groupId>com.wind.api</groupId>
     <artifactId>wind-api</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.wind.common</groupId>
+            <artifactId>wind-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wind.service</groupId>
+            <artifactId>wind-service</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -1,10 +1,11 @@
 package com.wind.service.handler;
 
-import com.zmn.advert.model.entity.advertapi.AdvertArea;
-import com.zmn.advert.model.entity.advertapi.AdvertCateg;
-import com.zmn.advert.model.entity.advertapi.query.AdvertAreaQuery;
-import com.zmn.advert.services.interfaces.advertapi.AdvertAreaService;
-import com.zmn.advert.services.interfaces.advertapi.AdvertCategService;
+import com.wind.dao.model.AdvertArea;
+import com.wind.dao.model.AdvertAreaQuery;
+import com.wind.dao.model.AdvertCateg;
+import com.wind.manager.utils.RedisManager;
+import com.wind.service.service.interfaces.AdvertAreaService;
+import com.wind.service.service.interfaces.AdvertCategService;
 import com.zmn.manager.common.interfaces.redis.RedisManager;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;

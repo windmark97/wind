@@ -1,5 +1,6 @@
 package com.wind.service.handler.callback.impl;
 
+import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.service.handler.callback.Advert360LoginHandler;
 import com.wind.service.util.XmlUtils;
 import lombok.extern.slf4j.Slf4j;
