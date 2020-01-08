@@ -1,14 +1,14 @@
 package com.wind.service.handler.strategy.impl;
 
 import com.google.common.collect.Maps;
-import com.zmn.advert.handler.strategy.Advert360ClientLoginStrategy;
-import com.zmn.advert.manager.constant.AdvertApiConsts;
-import com.zmn.advert.manager.exception.AdvertException;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.advert.model.entity.advertapi.ApiCallParam;
-import com.zmn.advert.util.ApiHttpClientUtils;
-import com.zmn.advert.util.EncryptUtils;
-import com.zmn.advert.util.XmlUtils;
+import com.wind.dao.model.AdvertBaseInfo;
+import com.wind.dao.model.ApiCallParam;
+import com.wind.manager.constant.AdvertApiConsts;
+import com.wind.manager.exception.AdvertException;
+import com.wind.service.handler.strategy.Advert360ClientLoginStrategy;
+import com.wind.service.util.ApiHttpClientUtils;
+import com.wind.service.util.EncryptUtils;
+import com.wind.service.util.XmlUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

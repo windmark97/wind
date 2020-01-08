@@ -1,7 +1,8 @@
 package com.wind.service.handler.strategy;
 
-import com.zmn.advert.handler.AdvertStrategy;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
+
+import com.wind.dao.model.AdvertBaseInfo;
+import com.wind.service.handler.AdvertStrategy;
 
 /**
  * @author: HuangYongJie

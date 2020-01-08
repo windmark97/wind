@@ -1,5 +1,9 @@
 package com.wind.service.handler;
 
+import com.wind.dao.model.AdvertBaseInfo;
+import com.wind.manager.exception.AdvertException;
+import com.wind.manager.utils.RedisManager;
+import com.wind.service.handler.strategy.Advert360ClientLoginStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -25,6 +29,7 @@ public class Advert360AccessTokenHandler {
 
     @Autowired
     private RedissonClient redissonClient;
+
     @Autowired
     private Advert360ClientLoginStrategy advert360ClientLoginStrategy;
 

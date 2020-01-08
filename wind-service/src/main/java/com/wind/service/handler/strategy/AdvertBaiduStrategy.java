@@ -1,6 +1,6 @@
 package com.wind.service.handler.strategy;
 
-import com.zmn.advert.handler.AdvertStrategy;
+import com.wind.service.handler.AdvertStrategy;
 
 /**
  * @author: HuangYongJie
