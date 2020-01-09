@@ -1,4 +1,4 @@
-package com.wind.manager.config;
+package com.wind.api.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;

@@ -20,7 +20,11 @@
         </dependency>
         <dependency>
             <groupId>com.wind.dao</groupId>
-            <artifactId>wind-dao</artifactId> 
+            <artifactId>wind-dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wind.manager</groupId>
+            <artifactId>wind-manager</artifactId> 
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,6 +56,11 @@
             <groupId>com.alibaba.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>0.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.1</version>
         </dependency>
     </dependencies>
 

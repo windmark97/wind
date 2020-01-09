@@ -1,10 +1,10 @@
 package com.wind.service.service.impl;
 
 import com.google.common.collect.Lists;
-import com.zmn.advert.model.entity.advertapi.AdvertAccount;
-import com.zmn.advert.model.entity.advertapi.query.AdvertAccountQuery;
-import com.zmn.advert.persistence.advertapi.AdvertAccountDao;
-import com.zmn.advert.services.interfaces.advertapi.AdvertAccountService;
+import com.wind.dao.mapper.AdvertAccountDao;
+import com.wind.dao.model.AdvertAccount;
+import com.wind.dao.model.AdvertAccountQuery;
+import com.wind.service.service.interfaces.AdvertAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

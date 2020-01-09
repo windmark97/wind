@@ -1,7 +1,7 @@
 package com.wind.dao.model;
 
 
-import com.zmn.common.utils.pager.Pages;
+import com.wind.common.entity.Pages;
 import lombok.Data;
 
 import java.io.Serializable;

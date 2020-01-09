@@ -1,8 +1,8 @@
 package com.wind.service.service.impl;
 
-import com.zmn.advert.model.entity.advertapi.AdvertCateg;
-import com.zmn.advert.persistence.advertapi.AdvertCategDao;
-import com.zmn.advert.services.interfaces.advertapi.AdvertCategService;
+import com.wind.dao.mapper.AdvertCategDao;
+import com.wind.dao.model.AdvertCateg;
+import com.wind.service.service.interfaces.AdvertCategService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

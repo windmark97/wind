@@ -1,5 +1,6 @@
 package com.wind.manager.utils;
 
+import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -177,11 +178,11 @@ public class RedisManager {
      * HashGet
      *
      * @param key  键 不能为null
-     * @param item 项 不能为null
+     * @param field 项 不能为null
      * @return 值
      */
-    public Object hget(String key, String item) {
-        return redisTemplate.opsForHash().get(key, item);
+    public Object hget(String key, String field) {
+        return redisTemplate.opsForHash().get(key, field);
     }
 
     /**
@@ -583,6 +584,14 @@ public class RedisManager {
             e.printStackTrace();
             return 0;
         }
+    }
+
+
+    public Map<Object, Object> hgetall(String key) {
+        return MapUtils.emptyIfNull(this.redisTemplate.opsForHash().entries(key));
+    }
+    public String hgetString(String key, String field) {
+        return hget(key,field).toString();
     }
 
 }

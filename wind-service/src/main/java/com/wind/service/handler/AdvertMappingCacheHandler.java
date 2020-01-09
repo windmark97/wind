@@ -6,7 +6,6 @@ import com.wind.dao.model.AdvertCateg;
 import com.wind.manager.utils.RedisManager;
 import com.wind.service.service.interfaces.AdvertAreaService;
 import com.wind.service.service.interfaces.AdvertCategService;
-import com.zmn.manager.common.interfaces.redis.RedisManager;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -133,13 +132,13 @@ public class AdvertMappingCacheHandler {
      */
     private String getCache(String fieldName, String cacheName, String lockName) {
         try {
-            return redisManager.hget(cacheName, fieldName);
+            return redisManager.hgetString(cacheName, fieldName);
         } catch (NullPointerException e) {
             boolean isExists = redisManager.exists(cacheName);
             if (!isExists) {
                 //缓存
                 doCacheData(cacheName, lockName);
-                return redisManager.hget(cacheName, fieldName);
+                return redisManager.hgetString(cacheName, fieldName);
             }else{
                 return DEFAULT_VALUE;
             }

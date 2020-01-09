@@ -1,6 +1,6 @@
 package com.wind.service.util;
 
-import com.zmn.advert.manager.exception.AdvertException;
+import com.wind.manager.exception.AdvertException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
