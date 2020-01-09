@@ -1,5 +1,5 @@
 server:
-  port: 9991
+  port: 8081
 
 spring:
   application:
@@ -38,5 +38,5 @@ spring:
 
 wind:
   logging:
-    level: info
+    level: debug
 

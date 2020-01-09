@@ -3,7 +3,7 @@ package com.wind.service.handler.impl;
 import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.manager.constant.AdvertApiEnum;
 import com.wind.manager.exception.AdvertException;
-import com.wind.manager.utils.SpringContextUtils;
+import com.wind.common.utils.SpringContextUtils;
 import com.wind.service.business.interfaces.advertapi.AdvertDataBService;
 import com.wind.service.handler.AdvertApiHandler;
 import com.wind.service.handler.AdvertDataHandler;

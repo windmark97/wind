@@ -1,11 +1,11 @@
 package com.wind.dao.buildsql.proxy;
 
 
+import com.wind.common.utils.SpringContextUtils;
 import com.wind.dao.buildsql.config.BuildSqlConfiguration;
 import com.wind.dao.buildsql.handler.BuildSqlExecuteHandler;
 import com.wind.dao.buildsql.handler.BuildSqlResultHandler;
 import com.wind.dao.buildsql.utils.BuildSqlUtils;
-import com.wind.dao.buildsql.utils.SpringContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.mapping.BoundSql;
