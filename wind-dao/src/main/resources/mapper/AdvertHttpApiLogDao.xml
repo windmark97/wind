@@ -83,7 +83,7 @@
     <include refid="whereKey"/>
   </select>
   <!--分页查询-->
-  <select id="listPage" parameterType="com.wind.dao.model.query.AdvertHttpApiLogQuery"
+  <select id="listPage" parameterType="com.wind.dao.model.AdvertHttpApiLogQuery"
           resultMap="BaseResultMap">
     SELECT
     <include refid="columnAll"/>
@@ -93,7 +93,7 @@
     <include refid="pageSql"/>
   </select>
   <!--统计数据量-->
-  <select id="countByQuery" parameterType="com.wind.dao.model.query.AdvertHttpApiLogQuery"
+  <select id="countByQuery" parameterType="com.wind.dao.model.AdvertHttpApiLogQuery"
           resultType="Integer">
     <include refid="countSql"/>
     <include refid="tableName"/>
@@ -111,7 +111,7 @@
     <include refid="deleteTable"/>
     <include refid="whereKey"/>
   </delete>
-  <delete id="deleteByWhere" parameterType="com.wind.dao.model.query.AdvertHttpApiLogQuery">
+  <delete id="deleteByWhere" parameterType="com.wind.dao.model.AdvertHttpApiLogQuery">
     <include refid="deleteTable"/>
     <include refid="whereSql"/>
   </delete>

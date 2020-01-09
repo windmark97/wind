@@ -102,7 +102,7 @@
         <include refid="whereKey"/>
     </select>
     <!--分页查询-->
-    <select id="listPage" parameterType="com.wind.dao.model.query.SemReportDayQuery"
+    <select id="listPage" parameterType="com.wind.dao.model.SemReportDayQuery"
             resultMap="BaseResultMap">
         SELECT
         <include refid="columnAll"/>
@@ -112,7 +112,7 @@
         <include refid="pageSql"/>
     </select>
     <!--统计数据量-->
-    <select id="countByQuery" parameterType="com.wind.dao.model.query.SemReportDayQuery"
+    <select id="countByQuery" parameterType="com.wind.dao.model.SemReportDayQuery"
             resultType="Integer">
         <include refid="countSql"/>
         <include refid="tableName"/>

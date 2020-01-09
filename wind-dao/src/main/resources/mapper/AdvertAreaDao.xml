@@ -85,7 +85,7 @@
     <include refid="whereKey"/>
   </select>
   <!--分页查询-->
-  <select id="listPage" parameterType="com.wind.dao.model.query.AdvertAreaQuery"
+  <select id="listPage" parameterType="com.wind.dao.model.AdvertAreaQuery"
           resultMap="BaseResultMap">
     SELECT
     <include refid="columnAll"/>
@@ -95,7 +95,7 @@
     <include refid="pageSql"/>
   </select>
   <!--统计数据量-->
-  <select id="countByQuery" parameterType="com.wind.dao.model.query.AdvertAreaQuery"
+  <select id="countByQuery" parameterType="com.wind.dao.model.AdvertAreaQuery"
           resultType="Integer">
     <include refid="countSql"/>
     <include refid="tableName"/>

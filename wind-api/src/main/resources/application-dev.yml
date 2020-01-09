@@ -8,7 +8,7 @@ spring:
     name: master
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.235.112:3306/tdap?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://192.168.235.112:3306/advert?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
     hikari:
@@ -30,10 +30,10 @@ spring:
 
 
   redis:
-      host: 172.19.10.9
+      host: 192.168.235.112
       port: 6379
       password: 123456
-      timeout: 3s
+      timeout: 1s
 
 mybatis:
   type-aliases-package: com.wind.dao.model
