@@ -45,7 +45,6 @@
             <artifactId>commons-collections4</artifactId>
             <version>${commons.collections4}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -55,11 +54,6 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
-                <!--去除springboot默认的tomcat-->
-               <!-- <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>-->
             </exclusions>
             <version>${springboot.version}</version>
         </dependency>
@@ -68,6 +62,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
             <version>${springboot.version}</version>
+        </dependency>
+        <!--Aop-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
     </dependencies>
 
