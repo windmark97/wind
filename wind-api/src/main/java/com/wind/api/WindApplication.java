@@ -14,7 +14,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class WindApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WindApplication.class, args);
+       try{
+           SpringApplication.run(WindApplication.class, args);
+       }catch (Exception e){
+           e.printStackTrace();
+       }
     }
 
 }

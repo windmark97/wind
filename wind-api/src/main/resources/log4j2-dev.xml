@@ -42,7 +42,7 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <logger name="com.wind" level="info">
+        <logger name="com.wind" level="debug">
             <AppenderRef ref="logfile" />
         </logger>
         <Root level="info">

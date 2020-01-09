@@ -50,7 +50,11 @@
                 <artifactId>wind-dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.wind.manager</groupId>
+                <artifactId>wind-manager</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- 引入log4j2依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
