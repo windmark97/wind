@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zmn.advert.persistence.advertapi.AdvertAreaDao">
-  <resultMap id="BaseResultMap" type="com.zmn.advert.model.entity.advertapi.AdvertArea">
+<mapper namespace="com.wind.dao.mapper.AdvertAreaDao">
+  <resultMap id="BaseResultMap" type="com.wind.dao.model.AdvertArea">
     <id column="area_id" jdbcType="INTEGER" property="areaId" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="group_name" jdbcType="VARCHAR" property="groupName" />
@@ -85,7 +85,7 @@
     <include refid="whereKey"/>
   </select>
   <!--分页查询-->
-  <select id="listPage" parameterType="com.zmn.advert.model.entity.advertapi.query.AdvertAreaQuery"
+  <select id="listPage" parameterType="com.wind.dao.model.query.AdvertAreaQuery"
           resultMap="BaseResultMap">
     SELECT
     <include refid="columnAll"/>
@@ -95,7 +95,7 @@
     <include refid="pageSql"/>
   </select>
   <!--统计数据量-->
-  <select id="countByQuery" parameterType="com.zmn.advert.model.entity.advertapi.query.AdvertAreaQuery"
+  <select id="countByQuery" parameterType="com.wind.dao.model.query.AdvertAreaQuery"
           resultType="Integer">
     <include refid="countSql"/>
     <include refid="tableName"/>

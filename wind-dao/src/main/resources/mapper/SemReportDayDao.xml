@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zmn.advert.persistence.advertapi.SemReportDayDao">
-    <resultMap id="BaseResultMap" type="com.zmn.advert.model.entity.advertapi.SemReportDay">
+<mapper namespace="com.wind.dao.mapper.SemReportDayDao">
+    <resultMap id="BaseResultMap" type="com.wind.dao.model.SemReportDay">
         <id column="report_id" jdbcType="BIGINT" property="reportId"/>
         <result column="report_date" jdbcType="INTEGER" property="reportDate"/>
         <result column="user_id" jdbcType="INTEGER" property="userId"/>
@@ -102,7 +102,7 @@
         <include refid="whereKey"/>
     </select>
     <!--分页查询-->
-    <select id="listPage" parameterType="com.zmn.advert.model.entity.advertapi.query.SemReportDayQuery"
+    <select id="listPage" parameterType="com.wind.dao.model.query.SemReportDayQuery"
             resultMap="BaseResultMap">
         SELECT
         <include refid="columnAll"/>
@@ -112,14 +112,14 @@
         <include refid="pageSql"/>
     </select>
     <!--统计数据量-->
-    <select id="countByQuery" parameterType="com.zmn.advert.model.entity.advertapi.query.SemReportDayQuery"
+    <select id="countByQuery" parameterType="com.wind.dao.model.query.SemReportDayQuery"
             resultType="Integer">
         <include refid="countSql"/>
         <include refid="tableName"/>
         <include refid="whereSql"/>
     </select>
 
-    <insert id="insert" parameterType="com.zmn.advert.model.entity.advertapi.SemReportDay">
+    <insert id="insert" parameterType="com.wind.dao.model.SemReportDay">
         <include refid="insertTable"/>(
         <include refid="columnNoKey"/>
         ) values (#{reportDate,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{channelId,jdbcType=INTEGER}, #{servCategId,jdbcType=INTEGER},

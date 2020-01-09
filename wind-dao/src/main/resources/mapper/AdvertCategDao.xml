@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zmn.advert.persistence.advertapi.AdvertCategDao">
-  <resultMap id="BaseResultMap" type="com.zmn.advert.model.entity.advertapi.AdvertCateg">
+<mapper namespace="com.wind.dao.mapper.AdvertCategDao">
+  <resultMap id="BaseResultMap" type="com.wind.dao.model.AdvertCateg">
     <id column="pk_id" jdbcType="INTEGER" property="pkId" />
     <result column="categ_id" jdbcType="INTEGER" property="categId" />
     <result column="type" jdbcType="INTEGER" property="type" />
@@ -78,7 +78,7 @@
     <include refid="whereKey"/>
   </select>
   <!--分页查询-->
-  <select id="listAll" parameterType="com.zmn.advert.model.entity.advertapi.AdvertCateg"
+  <select id="listAll" parameterType="com.wind.dao.model.AdvertCateg"
           resultMap="BaseResultMap">
     SELECT
     <include refid="columnAll"/>
@@ -87,7 +87,7 @@
     <include refid="orderSql"/>
   </select>
   <!--统计数据量-->
-  <select id="countByQuery" parameterType="com.zmn.advert.model.entity.advertapi.AdvertCateg"
+  <select id="countByQuery" parameterType="com.wind.dao.model.AdvertCateg"
           resultType="Integer">
     <include refid="countSql"/>
     <include refid="tableName"/>
