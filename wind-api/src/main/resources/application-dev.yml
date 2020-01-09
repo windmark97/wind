@@ -33,7 +33,7 @@ spring:
       host: 172.19.10.9
       port: 6379
       password: 123456
-      timeout: 1000
+      timeout: 3s
 
 
 wind:
