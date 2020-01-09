@@ -9,8 +9,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @version: v1.0
  * @since: 2020/1/8 17:15
  **/
-@EnableScheduling
-@SpringBootApplication
+//@EnableScheduling
+@SpringBootApplication(scanBasePackages={"com.wind"})
 public class WindApplication {
 
     public static void main(String[] args) {

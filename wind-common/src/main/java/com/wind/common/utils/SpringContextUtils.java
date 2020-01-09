@@ -1,4 +1,4 @@
-package com.wind.manager.utils;
+package com.wind.common.utils;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
