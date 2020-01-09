@@ -1,6 +1,6 @@
 package com.wind.service.service.interfaces;
 
-import com.zmn.advert.model.entity.advertapi.AdvertCateg;
+import com.wind.dao.model.AdvertCateg;
 
 import java.util.List;
 

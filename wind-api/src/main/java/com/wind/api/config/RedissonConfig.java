@@ -1,4 +1,4 @@
-package com.wind.manager.config;
+package com.wind.api.config;
 
 import jodd.util.StringUtil;
 import org.redisson.Redisson;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @author xiangjunming
  * @date 2019 /04/18 14:59:08
  */
-@Configuration
+//@Configuration
 public class RedissonConfig {
 
     /**

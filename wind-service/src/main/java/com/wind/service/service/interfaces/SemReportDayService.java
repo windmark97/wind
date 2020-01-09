@@ -1,6 +1,10 @@
 package com.wind.service.service.interfaces;
 
 
+import com.wind.dao.model.SemReportDay;
+
+import java.util.List;
+
 /**
  * SemReportDay数据服务
  *

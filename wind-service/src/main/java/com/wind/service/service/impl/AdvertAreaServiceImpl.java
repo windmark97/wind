@@ -1,9 +1,9 @@
 package com.wind.service.service.impl;
 
-import com.zmn.advert.model.entity.advertapi.AdvertArea;
-import com.zmn.advert.model.entity.advertapi.query.AdvertAreaQuery;
-import com.zmn.advert.persistence.advertapi.AdvertAreaDao;
-import com.zmn.advert.services.interfaces.advertapi.AdvertAreaService;
+import com.wind.dao.mapper.AdvertAreaDao;
+import com.wind.dao.model.AdvertArea;
+import com.wind.dao.model.AdvertAreaQuery;
+import com.wind.service.service.interfaces.AdvertAreaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,11 +1,11 @@
 package com.wind.service.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.zmn.advert.model.entity.advertapi.AdvertBaseInfo;
-import com.zmn.advert.model.entity.advertapi.AdvertHttpApiLog;
-import com.zmn.advert.model.entity.advertapi.ApiCallParam;
-import com.zmn.advert.persistence.advertapi.AdvertHttpApiLogDao;
-import com.zmn.advert.services.interfaces.advertapi.AdvertHttpApiLogService;
+import com.wind.dao.mapper.AdvertHttpApiLogDao;
+import com.wind.dao.model.AdvertBaseInfo;
+import com.wind.dao.model.AdvertHttpApiLog;
+import com.wind.dao.model.ApiCallParam;
+import com.wind.service.service.interfaces.AdvertHttpApiLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,9 +1,9 @@
 package com.wind.service.service.impl;
 
 import com.google.common.collect.Lists;
-import com.zmn.advert.model.entity.advertapi.SemReportDay;
-import com.zmn.advert.persistence.advertapi.SemReportDayDao;
-import com.zmn.advert.services.interfaces.advertapi.SemReportDayService;
+import com.wind.dao.mapper.SemReportDayDao;
+import com.wind.dao.model.SemReportDay;
+import com.wind.service.service.interfaces.SemReportDayService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

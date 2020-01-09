@@ -1,4 +1,4 @@
-package com.wind.manager.config;
+package com.wind.api.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @since 2018/12/8 10:24
  **/
 @Configuration
-@MapperScan(basePackages = {"com.zmn.advert.persistence"})
+@MapperScan(basePackages = {"com.wind.dao.mapper"})
 public class MybatisConfig {
 
 }
