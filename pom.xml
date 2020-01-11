@@ -55,6 +55,11 @@
                 <artifactId>wind-manager</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.wind.data</groupId>
+                <artifactId>wind-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- 引入log4j2依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -93,6 +98,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
             <!--http请求-->
