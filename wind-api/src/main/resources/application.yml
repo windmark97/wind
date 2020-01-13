@@ -3,3 +3,18 @@ spring:
     active: @activeProfile@
 logging:
   config: classpath:log4j2-dev.xml
+
+#nacos:
+#  config:
+#    bootstrap:
+#      enable: true
+#    max-retry: 5
+#    config-long-poll-timeout: 30000
+#    config-retry-time: 2000
+#    encode: UTF-8
+#    endpoint: acm.aliyun.com
+#    namespace: 1f196f1b-29bb-4a57-8127-693f9ddb104b
+#    access-key: 63a5e3d67ee346d6b1e0a8ad438172ec
+#    secret-key: BaPyK5H8DhnuvZ6a1E8PvVlVQaE=
+
+
