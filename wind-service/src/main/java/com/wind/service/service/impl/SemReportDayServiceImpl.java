@@ -41,5 +41,8 @@ public class SemReportDayServiceImpl implements SemReportDayService {
         }
     }
 
-
+    @Override
+    public void clearAdvertData(SemReportDay semReportDay) {
+        semReportDayDao.deleteByWhere(semReportDay);
+    }
 }

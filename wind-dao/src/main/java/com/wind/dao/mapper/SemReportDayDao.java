@@ -52,4 +52,6 @@ public interface SemReportDayDao {
      */
     Integer insertBatch(List<SemReportDay> list);
 
+    Integer deleteByWhere(SemReportDay semReportDay);
+
 }

@@ -26,4 +26,7 @@ public interface SemReportDayService {
      * @param semReportDayList
      */
     void insertBatchSemReportDay(List<SemReportDay> semReportDayList);
+
+
+    void clearAdvertData(SemReportDay semReportDay);
 }

@@ -20,8 +20,8 @@ import java.util.List;
  * @since: 2019/11/29 11:19
  **/
 @Slf4j
-@Service
-public class AdvertDataBServiceImpl implements AdvertDataBService {
+//@Service
+public class AdvertDataBServiceImpl1 {
 
     //@Reference(check = false)
     //private DatasetModifyRemoteService datasetModifyRemoteService;
@@ -36,7 +36,7 @@ public class AdvertDataBServiceImpl implements AdvertDataBService {
     private static final String CLEAR_SQL = "alter table ods.ods_publicize_cost drop partition(day=#day,account_id=#userId) ";
 
 
-    @Override
+    //@Override
     public void modifyAdvertDataByquery(List<SemReportDay> dataList) {
         if (dataList == null || dataList.isEmpty()) {
             log.info("insertBatchSemReportDay: null data need insert!");
@@ -68,7 +68,7 @@ public class AdvertDataBServiceImpl implements AdvertDataBService {
         //log.info("clearData result:{},sql:{} ", JSON.toJSONString(responseDTO), sql);
     }
 
-    @Override
+    //@Override
     public void clearAdvertData(AdvertBaseInfo info) {
         String startTimeStr = info.getStartDate().replaceAll("-", "");
         String endTimeStr = info.getEndDate().replaceAll("-", "");
