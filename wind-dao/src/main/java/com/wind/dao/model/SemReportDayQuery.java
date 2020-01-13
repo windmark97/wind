@@ -2,9 +2,11 @@ package com.wind.dao.model;
 
 import com.wind.common.entity.Pages;
 import lombok.Data;
+import org.omg.CORBA.INTERNAL;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  *  SemReportDay查询条件
@@ -21,6 +23,8 @@ public class SemReportDayQuery extends Pages implements Serializable {
      * 报告Id
      */
     private Long reportId;
+
+    private Integer userId;
 
     /**
      * 报告日期，格式yyyyMMdd
@@ -42,10 +46,6 @@ public class SemReportDayQuery extends Pages implements Serializable {
      */
     private Integer categOneId;
 
-    /**
-     * 2级产品分类Id
-     */
-    private Integer categTwoId;
 
     /**
      * 省份Id
@@ -62,13 +62,16 @@ public class SemReportDayQuery extends Pages implements Serializable {
      */
     private String city;
 
-    /**
-     * 子公司
-     */
-    private Integer companyId;
 
     /**
      * 创建/更新日期
      */
     private Date updateTime;
+
+    private Integer channelId;
+    private Integer reportDate;
+
+    private List<Integer> reportIds;
+    private Integer startDate;
+    private Integer endDate;
 }

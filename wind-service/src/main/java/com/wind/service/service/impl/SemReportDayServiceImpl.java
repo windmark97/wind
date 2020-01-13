@@ -3,6 +3,7 @@ package com.wind.service.service.impl;
 import com.google.common.collect.Lists;
 import com.wind.dao.mapper.SemReportDayDao;
 import com.wind.dao.model.SemReportDay;
+import com.wind.dao.model.SemReportDayQuery;
 import com.wind.service.service.interfaces.SemReportDayService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class SemReportDayServiceImpl implements SemReportDayService {
     }
 
     @Override
-    public void clearAdvertData(SemReportDay semReportDay) {
+    public void clearAdvertData(SemReportDayQuery semReportDay) {
         semReportDayDao.deleteByWhere(semReportDay);
     }
 }

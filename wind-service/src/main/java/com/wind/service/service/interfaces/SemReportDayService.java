@@ -2,6 +2,7 @@ package com.wind.service.service.interfaces;
 
 
 import com.wind.dao.model.SemReportDay;
+import com.wind.dao.model.SemReportDayQuery;
 
 import java.util.List;
 
@@ -28,5 +29,5 @@ public interface SemReportDayService {
     void insertBatchSemReportDay(List<SemReportDay> semReportDayList);
 
 
-    void clearAdvertData(SemReportDay semReportDay);
+    void clearAdvertData(SemReportDayQuery semReportDay);
 }

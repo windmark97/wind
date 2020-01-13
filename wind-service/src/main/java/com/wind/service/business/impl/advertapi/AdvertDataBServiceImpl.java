@@ -2,6 +2,7 @@ package com.wind.service.business.impl.advertapi;
 
 import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.dao.model.SemReportDay;
+import com.wind.dao.model.SemReportDayQuery;
 import com.wind.service.business.interfaces.advertapi.AdvertDataBService;
 import com.wind.service.service.interfaces.SemReportDayService;
 import lombok.extern.slf4j.Slf4j;
@@ -36,7 +37,7 @@ public class AdvertDataBServiceImpl implements AdvertDataBService {
         Integer startDate = Integer.valueOf(startTimeStr);
         Integer endDate = Integer.valueOf(endTimeStr);
         for (int i = startDate; i <= endDate; i++) {
-            SemReportDay semReportDay = new SemReportDay();
+            SemReportDayQuery semReportDay = new SemReportDayQuery();
             semReportDay.setUserId(info.getUserId());
             semReportDay.setReportDate(i);
             semReportDayService.clearAdvertData(semReportDay);
