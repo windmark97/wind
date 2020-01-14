@@ -51,3 +51,18 @@ wind:
   logging:
     level: debug
 
+
+dubbo:
+  scan:
+    base-packages: com.wind.dubbo.impl
+  application:
+    name: dubbo-provider
+    id: dubbo-provider
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://192.168.235.111:2181
+    check: false
+
