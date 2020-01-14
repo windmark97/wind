@@ -9,7 +9,7 @@
                 <pattern>[%-5p] %d %c %M %L- %m%n</pattern>
             </PatternLayout>
         </Console>
-        <RollingFile name="logfile" fileName="${LOG_HOME}/wind-api.log" filePattern="${LOG_HOME}/log-%d{yyyy-MM-dd}.log">  
+        <RollingFile name="logfile" fileName="${LOG_HOME}/wind-route.log" filePattern="${LOG_HOME}/log-%d{yyyy-MM-dd}.log">  
             <Filters>
                 <ThresholdFilter level="INFO" />
                 <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL" />
@@ -23,17 +23,10 @@
             </Policies>
             <DefaultRolloverStrategy max="20"/>
         </RollingFile>
-        <RollingFile name="errfile" fileName="${LOG_HOME}/wind-api-error.log" filePattern="${LOG_HOME}/error-%d{yyyy-MM-dd}.log">  
+        <RollingFile name="errfile" fileName="${LOG_HOME}/wind-route-error.log" filePattern="${LOG_HOME}/error-%d{yyyy-MM-dd}.log">  
             <Filters>
                 <ThresholdFilter level="ERROR" />
             </Filters>
-            <PatternLayout pattern="[%-5p] %d %c %M:%L- %m%n" />  
-            <Policies>  
-                <TimeBasedTriggeringPolicy interval="1" modulate="true" />  
-            </Policies>
-            <DefaultRolloverStrategy max="20"/>
-        </RollingFile>
-        <RollingFile name="sqlFile" fileName="${LOG_HOME}/wind-api-sql.log" filePattern="${LOG_HOME}/sql-%d{yyyy-MM-dd}.log">  
             <PatternLayout pattern="[%-5p] %d %c %M:%L- %m%n" />  
             <Policies>  
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />  

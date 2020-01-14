@@ -19,10 +19,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.wind.common</groupId>
-            <artifactId>wind-common</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.wind.dubbo.interfaces</groupId>
             <artifactId>wind-dubbo-interfaces</artifactId>
         </dependency>

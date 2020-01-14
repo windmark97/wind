@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+dubbo:
+  application:
+    name: wind-route
+  registry:
+    address: zookeeper://192.168.235.111:2181
+    #protocol: zookeeper
+  monitor:
+    protocol: registry
+  consumer:
+    check: false
+    #timeout: 3000
