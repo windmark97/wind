@@ -11,9 +11,10 @@ dubbo:
   registry:
     address: zookeeper://192.168.235.111:2181
     #protocol: zookeeper
+  protocol:
+    name: wind-route
+    port: 20880
   monitor:
     protocol: registry
   consumer:
     check: false
-    #timeout: 3000
-

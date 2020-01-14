@@ -13,7 +13,7 @@ import java.util.Map;
  * @Author: hyj
  * @Version: 1.0
  */
-@Controller
+//@Controller
 public class PrivateController extends BaseControllerEx{
     @ResponseBody
     @RequestMapping(value = "/private", method = RequestMethod.POST)

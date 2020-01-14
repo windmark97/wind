@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  * @since: 2020/1/14 16:21
  **/
 @Service
-public class listAdvertAccountImpl implements AdvertDataListService {
+public class AdvertDataListServiceImpl implements AdvertDataListService {
     @Autowired
     private AdvertAccountService advertAccountService;
 

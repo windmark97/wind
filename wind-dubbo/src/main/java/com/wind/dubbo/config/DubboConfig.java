@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
  * @version: v1.0
  * @since: 2020/1/14 16:20
  **/
-@EnableDubbo
-@Configuration
+//@EnableDubbo
+//@Configuration
 public class DubboConfig {
 
 

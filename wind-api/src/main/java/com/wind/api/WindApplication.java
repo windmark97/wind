@@ -1,8 +1,8 @@
 package com.wind.api;
 
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @author: HuangYongJie
@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @since: 2020/1/8 17:15
  **/
 //@EnableScheduling
+@EnableDubbo
 @SpringBootApplication(scanBasePackages={"com.wind"})
 public class WindApplication {
 

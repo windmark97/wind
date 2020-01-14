@@ -17,6 +17,10 @@
             <artifactId>wind-common</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.wind.dubbo</groupId>
+            <artifactId>wind-dubbo</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.wind.service</groupId>
             <artifactId>wind-service</artifactId>
         </dependency>
@@ -25,11 +29,6 @@
             <artifactId>nacos-config-spring-boot-starter</artifactId>
             <version>0.2.3</version>
         </dependency>-->
-        <dependency>
-            <groupId>com.wind.dubbo</groupId>
-            <artifactId>wind-dubbo</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
 </project>
