@@ -8,6 +8,7 @@ spring:
 dubbo:
   application:
     name: wind-route
+    id: wind-route
   registry:
     address: zookeeper://192.168.235.111:2181
     #protocol: zookeeper

@@ -52,8 +52,8 @@ dubbo:
   scan:
     base-packages: com.wind.dubbo.impl
   application:
-    name: dubbo-provider
-    id: dubbo-provider
+    name: wind-service
+    id: wind-service
   protocol:
     id: dubbo
     name: dubbo
