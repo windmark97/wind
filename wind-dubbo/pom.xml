@@ -9,27 +9,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wind.api</groupId>
-    <artifactId>wind-api</artifactId>
+    <groupId>com.wind.dubbo</groupId>
+    <artifactId>wind-dubbo</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.wind.common</groupId>
-            <artifactId>wind-common</artifactId>
+            <groupId>com.wind.dubbo.interfaces</groupId>
+            <artifactId>wind-dubbo-interfaces</artifactId>
         </dependency>
         <dependency>
             <groupId>com.wind.service</groupId>
             <artifactId>wind-service</artifactId>
         </dependency>
-        <!--<dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-config-spring-boot-starter</artifactId>
-            <version>0.2.3</version>
-        </dependency>-->
         <dependency>
-            <groupId>com.wind.dubbo</groupId>
-            <artifactId>wind-dubbo</artifactId>
-            <version>${project.version}</version>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
         </dependency>
+
+
     </dependencies>
 
 </project>

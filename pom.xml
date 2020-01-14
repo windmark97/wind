@@ -23,6 +23,9 @@
         <module>wind-api</module>
         <module>wind-dao</module>
         <module>wind-service</module>
+        <module>wind-route</module>
+        <module>wind-dubbo-interfaces</module>
+        <module>wind-dubbo</module>
     </modules>
     <properties>
         <project.version>1.0-SNAPSHOT</project.version>
@@ -43,6 +46,16 @@
             <dependency>
                 <groupId>com.wind.service</groupId>
                 <artifactId>wind-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wind.dubbo.interfaces</groupId>
+                <artifactId>wind-dubbo-interfaces</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wind.dubbo</groupId>
+                <artifactId>wind-dubbo</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

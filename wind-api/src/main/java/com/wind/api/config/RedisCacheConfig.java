@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * redis缓存
+ * 使用redis缓存
  * @author: HuangYongJie
  * @version: v1.0
  * @since: 2020/1/8 17:17

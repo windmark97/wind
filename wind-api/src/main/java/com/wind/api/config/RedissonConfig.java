@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * The type Redisson config.
+ *  redisson配置
  *
  * @author xiangjunming
  * @date 2019 /04/18 14:59:08
