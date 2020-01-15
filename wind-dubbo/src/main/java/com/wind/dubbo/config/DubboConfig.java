@@ -18,16 +18,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DubboConfig {
 
-    @Value("${dubbo.registry.address}")
+    /*@Value("${dubbo.registry.address}")
     private String dubboRegistryAddress;
     @Value("${dubbo.applicatiom.name}")
     private String dubboApplicationName;
 
     @Bean
     public ApplicationConfig getApplicationConfig() {
-        System.out.println("=================================================");
-        System.out.println("=================================================");
-        System.out.println("=================================================");
         ApplicationConfig applicationConfig = new ApplicationConfig();
         applicationConfig.setName(dubboApplicationName);
         return applicationConfig;
@@ -55,5 +52,5 @@ public class DubboConfig {
         protocolConfig.setName("dubbo");
         protocolConfig.setPort(20880);
         return protocolConfig;
-    }
+    }*/
 }

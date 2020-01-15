@@ -53,18 +53,18 @@ dubbo:
     base-packages: com.wind.dubbo.impl
   application:
     name: wind-service
-    id: wind-service
-  protocol:
-    id: dubbo
-    name: dubbo
-    port: 20880
+    qos-enable: false
+    qos-port: 22222
+    qos-accept-foreign-ip: false
   registry:
     address: zookeeper://192.168.235.111:2181
-    check: true
-    timeout: 3000
+    protocol: zookeeper
+    check: false
+  protocol:
+    name: dubbo
+    port: 20880
   provider:
     timeout: 3000
-
 wind:
   logging:
     level: debug

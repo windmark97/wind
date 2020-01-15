@@ -48,7 +48,7 @@ public class ApiController {
         AdvertAccountDIO advertAccountDIO = new AdvertAccountDIO();
         advertAccountDIO.setUserId(10);
         ResponseDTO<List<AdvertAccountDRO>> resultList = advertDataListService.listAdvertAccount(advertAccountDIO);
-        System.out.println(JSON.toJSONString(resultList.getData()));
+        System.out.println("test::::::::::::::::"+JSON.toJSONString(resultList.getData()));
         log.info("start deal with :{}:{}",serviceName,methodName);
         Map<String,Object> resultMap;
         Object service = SpringContextUtils.getBean(serviceName);

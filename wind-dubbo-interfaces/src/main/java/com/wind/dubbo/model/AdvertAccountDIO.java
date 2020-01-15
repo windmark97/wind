@@ -2,13 +2,15 @@ package com.wind.dubbo.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author: HuangYongJie
  * @version: v1.0
  * @since: 2020/1/14 16:13
  **/
 @Data
-public class AdvertAccountDIO {
+public class AdvertAccountDIO implements Serializable{
     /**
      * 主键id
      */
