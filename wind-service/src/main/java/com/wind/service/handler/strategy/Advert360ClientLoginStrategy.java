@@ -2,7 +2,6 @@ package com.wind.service.handler.strategy;
 
 
 import com.wind.dao.model.AdvertBaseInfo;
-import com.wind.service.handler.AdvertStrategy;
 
 /**
  * @author: HuangYongJie

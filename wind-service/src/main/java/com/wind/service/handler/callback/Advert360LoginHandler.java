@@ -1,7 +1,5 @@
 package com.wind.service.handler.callback;
 
-import com.wind.service.handler.AdvertDataHandler;
-
 /**
  *  360搜索推广登录返回数据处理
  * @author: HuangYongJie

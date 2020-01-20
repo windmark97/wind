@@ -6,7 +6,7 @@ import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.dao.model.ApiCallParam;
 import com.wind.manager.constant.AdvertApiConsts;
 import com.wind.manager.exception.AdvertException;
-import com.wind.service.handler.AdvertDataHandler;
+import com.wind.service.handler.callback.AdvertDataHandler;
 import com.wind.service.handler.strategy.AdvertShenmaStrategy;
 import com.wind.service.util.ApiHttpClientUtils;
 import lombok.extern.slf4j.Slf4j;

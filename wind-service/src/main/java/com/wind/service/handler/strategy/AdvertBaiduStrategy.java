@@ -1,7 +1,5 @@
 package com.wind.service.handler.strategy;
 
-import com.wind.service.handler.AdvertStrategy;
-
 /**
  * @author: HuangYongJie
  * @version: v1.0

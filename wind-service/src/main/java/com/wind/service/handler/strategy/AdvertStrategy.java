@@ -1,7 +1,8 @@
-package com.wind.service.handler;
+package com.wind.service.handler.strategy;
 
 
 import com.wind.dao.model.AdvertBaseInfo;
+import com.wind.service.handler.callback.AdvertDataHandler;
 
 /**
  * 搜索推广执行策略接口

@@ -1,7 +1,5 @@
 package com.wind.service.handler.callback;
 
-import com.wind.service.handler.AdvertDataHandler;
-
 /**
  * 搜狗返回结果处理
  * @author: HuangYongJie

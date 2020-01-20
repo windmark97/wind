@@ -8,7 +8,7 @@ import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.manager.constant.AdvertApiConsts;
 import com.wind.manager.exception.AdvertException;
 import com.wind.service.handler.Advert360AccessTokenHandler;
-import com.wind.service.handler.AdvertDataHandler;
+import com.wind.service.handler.callback.AdvertDataHandler;
 import com.wind.service.handler.strategy.Advert360ReportStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

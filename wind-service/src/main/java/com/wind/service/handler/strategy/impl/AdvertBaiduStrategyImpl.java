@@ -4,7 +4,7 @@ import com.google.common.collect.Maps;
 import com.wind.dao.model.AdvertBaseInfo;
 import com.wind.dao.model.ApiCallParam;
 import com.wind.manager.constant.AdvertApiConsts;
-import com.wind.service.handler.AdvertDataHandler;
+import com.wind.service.handler.callback.AdvertDataHandler;
 import com.wind.service.handler.strategy.AdvertBaiduStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
