@@ -68,3 +68,12 @@ dubbo:
 wind:
   logging:
     level: debug
+
+async:
+  executor:
+    thread:
+      core_pool_size: 5
+      max_pool_size: 5
+      queue_capacity: 50
+      name:
+        prefix: executors
