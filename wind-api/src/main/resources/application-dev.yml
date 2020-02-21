@@ -40,6 +40,21 @@ spring:
       port: 6379
       password: 123456
       timeout: 1s
+  rabbitmq:
+    host: 192.168.235.111
+    port: 5672
+    username:
+    password:
+    listener:
+      simple:
+        concurrency:
+      concurrency: 1
+      max-concurrency: 1
+      prefetch: 1
+    queueName: advertQueue
+    directExchange: advertExchange
+    routingKey: routingKey
+    #virtual-host:
 
 mybatis:
   type-aliases-package: com.wind.dao.model

@@ -33,6 +33,12 @@ public class AdvertHttpApiLogServiceImpl implements AdvertHttpApiLogService {
 
     @Override
     public void insertAdvertHttpApiLog(AdvertBaseInfo info, String message) {
+        //insertToMysql(info,message);
+    }
+
+
+
+    private void insertToMysql(AdvertBaseInfo info, String message){
         AdvertHttpApiLog advertHttpApiLog = buildAdvertHttpApiLog(info, message);
         advertHttpApiLogDao.insert(advertHttpApiLog);
     }

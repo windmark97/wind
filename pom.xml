@@ -26,6 +26,7 @@
         <module>wind-route</module>
         <module>wind-dubbo-interfaces</module>
         <module>wind-dubbo</module>
+        <module>wind-mq</module>
     </modules>
     <properties>
         <project.version>1.0-SNAPSHOT</project.version>
