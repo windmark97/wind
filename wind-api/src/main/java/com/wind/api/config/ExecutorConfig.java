@@ -11,6 +11,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
+ * spring线程池
  * @author: HuangYongJie
  * @version: v1.0
  * @since: 2020/1/21 14:43
