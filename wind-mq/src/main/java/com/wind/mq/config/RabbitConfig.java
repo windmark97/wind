@@ -37,7 +37,7 @@ public class RabbitConfig {
      * 单一消费者
      * @return
      */
-    @Bean(name = "singleListenerContainer")
+    //@Bean(name = "singleListenerContainer")
     public SimpleRabbitListenerContainerFactory listenerContainer(){
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
@@ -91,6 +91,5 @@ public class RabbitConfig {
         });
         return rabbitTemplate;
     }
-
 
 }
