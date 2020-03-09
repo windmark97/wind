@@ -13,13 +13,24 @@ import java.util.Map;
  **/
 @Data
 public class ApiCallParam {
-
+    /**
+     * url地址
+     */
     private String url;
 
+    /**
+     * 消息头
+     */
     private Map<String, Object> headerMap;
 
+    /**
+     * 数据body
+     */
     private Map<String, Object> dataMap;
 
+    /**
+     * 编码
+     */
     private String encodeFormat;
 
 }

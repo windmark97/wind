@@ -63,7 +63,7 @@ public class DistributedLockUtils {
     }
 
 
-    /**
+    /** 可重入锁
      * @param key       全局唯一KEY
      * @param validTime 过期时间(秒)
      * @return 可重入锁
@@ -73,7 +73,7 @@ public class DistributedLockUtils {
         return new ReentrantRedisDistributedLock(key, instance.redisTemplate, validTime, DefaultTimeUnit);
     }
 
-    /**
+    /** 可重入锁
      * @param key       全局唯一KEY
      * @param validTime 过期时间(秒)
      * @param waitTime  获取锁等待时间(秒)
