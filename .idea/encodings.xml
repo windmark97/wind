@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-dubbo-interfaces" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-dubbo-interfaces/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-dubbo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-manager/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-mq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-mq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-route" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-route/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wind-task" charset="UTF-8" />
+  </component>
+</project>
